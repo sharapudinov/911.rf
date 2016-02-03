@@ -1,0 +1,39 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Главная",
+		"/",
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Услуги",
+		"services/",
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Запчасти",
+		"parts/",
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Вакансии",
+		"vakansii/",
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Контакты",
+		"contacts/",
+		Array(),
+		Array(),
+		""
+	)
+);
+?>

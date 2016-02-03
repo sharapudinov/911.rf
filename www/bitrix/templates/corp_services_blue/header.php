@@ -1,139 +1,169 @@
-<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
+<? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
 <?
 IncludeTemplateLangFile(__FILE__);
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
 <head>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<title><?$APPLICATION->ShowTitle()?></title>
-	<link rel="shortcut icon" type="image/x-icon" href="<?=SITE_TEMPLATE_PATH?>/favicon.ico" />
-	
-	<link rel="stylesheet" type="text/css" href="<?=SITE_TEMPLATE_PATH?>/common.css" />
-	
-	<?$APPLICATION->ShowHead();?>
-	
-	<!--[if lte IE 6]>
-	<style type="text/css">
-		
-		#support-question { 
-			background-image: none;
-			filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./images/question.png', sizingMethod = 'crop'); 
-		}
-		
-		#support-question { left: -9px;}
-		
-		#banner-overlay {
-			background-image: none;
-			filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./images/overlay.png', sizingMethod = 'crop');
-		}
-		
-	</style>
-	<![endif]-->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>Автосервис 911 на ВАО Москва</title>
 
-	<link rel="stylesheet" type="text/css" href="<?=SITE_TEMPLATE_PATH?>/colors.css" />
-		
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <!-- Слайдер -->
+    <? $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/mobilyslider.js') ?>
+    <? $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/init.js') ?>
+
+    <!-- Pop Up -->
+    <? $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/jquery.bpopup.min.js') ?>
+    <!-- Пользовательские функции -->
+    <? $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/common.js') ?>
+
+    <? $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/css/template.css') ?>
+
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet'
+          type='text/css'>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <? $APPLICATION->ShowHead(); ?>
+
 </head>
 <body>
-		<div id="page-wrapper">
-		
-			<div id="panel"><?$APPLICATION->ShowPanel();?></div>
-	
-			<div id="header">
-				<table>
-					<tr>
-						<td id="logo"><a href="<?=SITE_DIR?>" title="<?=GetMessage("HDR_GOTO_MAIN")?>"><?$APPLICATION->IncludeFile(
-									SITE_DIR."include/company_name.php",
-									Array(),
-									Array("MODE"=>"html")
-								);?></a></td>
-						<td id="slogan"><?$APPLICATION->IncludeFile(
-									SITE_DIR."include/company_slogan.php",
-									Array(),
-									Array("MODE"=>"html")
-								);?></td>
-					</tr>
-				</table>
+<div id="panel"><? $APPLICATION->ShowPanel(); ?></div>
+<div id="main">
+    <div class="container">
+        <div id="sidebar">
+            <? $APPLICATION->IncludeComponent("bitrix:menu", "mobile_top", array(
+                "ROOT_MENU_TYPE" => "mobile_top",
+                "MENU_CACHE_TYPE" => "Y",
+                "MENU_CACHE_TIME" => "36000000",
+                "MENU_CACHE_USE_GROUPS" => "Y",
+                "MENU_CACHE_GET_VARS" => array(),
+                "MAX_LEVEL" => "1",
+                "CHILD_MENU_TYPE" => "left",
+                "USE_EXT" => "N",
+                "ALLOW_MULTI_SELECT" => "N"
+            ),
+                false
+            ); ?>
+        </div>
+        <div class="main-content">
+            <a href="#" data-toggle=".container" id="sidebar-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class="content">
+                <header class="header">
+                    <div class="pos31"><!-- begin nostyle -->
+                        <div class="nostyle">
+                            <div class="service-info">
+                                <p>Тагильская, 4, стр. 15</p>
+                                <p><span>Автосервис 911, г. Москва</span></p>
+                                <p>с 09:00 до 21:00</p>
+                                <a href="/kontakty.html" class="pos32"><span>смотреть на карте</span></a>
+                            </div>
+                        </div>
+                    </div>
 
-				
-				<div id="search">
-				<?$APPLICATION->IncludeComponent("bitrix:search.form", "flat", array(
-					"PAGE" => "#SITE_DIR#search/index.php"
-					),
-					false
-				);?>
-				</div>
-			</div>
+                    <div class="pos34">
+                        <div class="nostyle">
+                            <div class="custom">
+                                <img alt="spec" src="<?= SITE_TEMPLATE_PATH ?>/images/spec.png"/>
+                            </div>
+                        </div>
+                    </div>
 
-<?$APPLICATION->IncludeComponent("bitrix:menu", "top", array(
-	"ROOT_MENU_TYPE" => "top",
-	"MENU_CACHE_TYPE" => "Y",
-	"MENU_CACHE_TIME" => "36000000",
-	"MENU_CACHE_USE_GROUPS" => "Y",
-	"MENU_CACHE_GET_VARS" => array(
-	),
-	"MAX_LEVEL" => "1",
-	"CHILD_MENU_TYPE" => "left",
-	"USE_EXT" => "N",
-	"ALLOW_MULTI_SELECT" => "N"
-	),
-	false
-);?>
-				
-		
-			<div id="content-wrapper">
-				<div id="content">
-				<?if($APPLICATION->GetCurPage(false)==SITE_DIR):?>
-					<div id="banner">
-						<div id="banner-image"><?$APPLICATION->IncludeFile(
-									SITE_DIR."include/banner.php",
-									Array(),
-									Array("MODE"=>"html")
-								);?></div>
-						<table cellspacing="0" id="banner-text">
-							<tr>
-								<td width="35%">&nbsp;</td>
-								<td>
-								<?$APPLICATION->IncludeFile(
-									SITE_DIR."include/banner_text.php",
-									Array(),
-									Array("MODE"=>"text")
-								);?>
-								</td>
-							</tr>
-						</table>
-						<div id="banner-overlay"></div>
-					</div>
-				<?else:?>
-					<div id="breadcrumb">
-						<?$APPLICATION->IncludeComponent("bitrix:breadcrumb", ".default", array(
-	"START_FROM" => "1",
-	"PATH" => "",
-	"SITE_ID" => SITE_ID
-	),
-	false
-);?>
-					</div>					
-				<?endif?>					
-					<div id="workarea-wrapper">
-						<div id="left-menu">
-						<?$APPLICATION->IncludeComponent("bitrix:menu", "tree", array(
-							"ROOT_MENU_TYPE" => "leftfirst",
-							"MENU_CACHE_TYPE" => "Y",
-							"MENU_CACHE_TIME" => "36000000",
-							"MENU_CACHE_USE_GROUPS" => "Y",
-							"MENU_CACHE_GET_VARS" => array(
-							),
-							"MAX_LEVEL" => "4",
-							"CHILD_MENU_TYPE" => "left",
-							"USE_EXT" => "N",
-							"ALLOW_MULTI_SELECT" => "N",
-							"SHOW_LAST_LEVEL_BUTTONS" => "Y"
-								),
-							false
-						);?>
-						</div>						
-						<div id="workarea">
-							<div id="workarea-inner">
-							<h5><?$APPLICATION->ShowTitle(false);?></h5> 
+                    <div class="pos36">
+                        <div class="nostyle">
+
+                            <div class="btn-place">
+
+                                <button id="zvonok-button"></button>
+                                <button id="konsultac-button"></button>
+
+                                <form method="post" id="zakaz-form" enctype="multipart/form-data" action="#">
+                                    <fieldset class="formFieldset">
+                                        <ul class="formContainer">
+                                            <li>
+                                                <p>Заявка</p>
+                                            </li>
+                                            <li>
+                                                <input type="text" value="" size="20" name="form[name]" id="name"
+                                                       placeholder="Ваше имя" class="rsform-input-box"/>
+                                            </li>
+                                            <li>
+                                                <input type="text" value="" size="20" name="form[tel]" id="tel"
+                                                       placeholder="Ваш телефон" class="rsform-input-box"/>
+                                            </li>
+                                            <li>
+                                                <input type="submit" value="ЗАКАЗАТЬ" name="form[sub]" id="sub"
+                                                       class="rsform-submit-button"/>
+                                            </li>
+                                        </ul>
+                                    </fieldset>
+                                </form>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="pos37">
+                        <div class="nostyle">
+                            <div class="name-tel">
+                                <p>Сервис</p>
+                                <p>Кузовной цех</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ul class="slogan" data-left="81.17%">
+                        <li>8 (964) 7777-903</li>
+                        <li>8 (909) 9613-999</li>
+                    </ul>
+
+                    <a href="index.html" data-left="1.35%" class="logo-852579020">
+                        <img src="<?= SITE_TEMPLATE_PATH ?>/images/logo-852579020.png">
+                    </a>
+                    <nav class="nav">
+
+                        <ul class="hmenu">
+                            <li class="item-101 current active">
+                                <a class=" active" href="/"><img class="menu-image"
+                                                                          src="<?= SITE_TEMPLATE_PATH ?>/images/icon1.png"
+                                                                          alt="Главная"/>Главная</a>
+                            </li>
+                            <li class="item-183">
+                                <a href="/services/"><img class="menu-image"
+                                                           src="<?= SITE_TEMPLATE_PATH ?>/images/icon2.png"
+                                                           alt="Услуги"/>Услуги</a>
+                            </li>
+                            <li class="item-184">
+                                <a href="/parts/"><img class="menu-image"
+                                                              src="<?= SITE_TEMPLATE_PATH ?>/images/icon3.png"
+                                                              alt="Запчасти"/>Запчасти</a>
+                            </li>
+                            <li class="item-185">
+                                <a href="/spetsialnye-predlozheniya/"><img class="menu-image"
+                                                                              src="<?= SITE_TEMPLATE_PATH ?>/images/icon4.png"
+                                                                              alt="Специальные предложения"/>Специальные
+                                    предложения</a>
+                            </li>
+                            <li class="item-186">
+                                <a href="/vakansii/"><img class="menu-image"
+                                                             src="<?= SITE_TEMPLATE_PATH ?>/images/icon5.png"
+                                                             alt="Вакансии"/>Вакансии</a>
+                            </li>
+                            <li class="item-187">
+                                <a href="/contacts/"><img class="menu-image"
+                                                             src="<?= SITE_TEMPLATE_PATH ?>/images/icon6.png"
+                                                             alt="Контакты"/>Контакты</a>
+                            </li>
+                        </ul>
+
+                    </nav>
+
+                </header>
+
 
