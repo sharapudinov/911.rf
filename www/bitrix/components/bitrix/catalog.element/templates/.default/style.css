@@ -191,8 +191,8 @@
 	color:#3f3f3f;
 	line-height:35px;
 }
-.bx_item_detail .tab-boby-container .container>div.tab-off{display:none;}
-.bx_item_detail .tab-boby-container .container>div{
+.bx_item_detail .tab-boby-container .main-container >div.tab-off{display:none;}
+.bx_item_detail .tab-boby-container .main-container >div{
 
 }
 .bx_item_detail .item_comments{

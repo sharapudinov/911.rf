@@ -1,6 +1,5 @@
 #main
 {
-	background: #F0F0F0 url('images/page.jpeg') top center no-repeat scroll;
 	margin: 0 auto;
 	font-size: 13px;
 	font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
@@ -14,6 +13,12 @@
 	cursor: default;
 	overflow: hidden;
 }
+
+#main.bg {
+	background: #F0F0F0 url('images/page.jpeg') top center no-repeat scroll;
+}
+
+
 
 .pos31
 {
@@ -332,8 +337,22 @@ body
 	content: " ";
 	display: table;
 }
+.small_header:before, #header-bg:before, .layout-cell:before, .layout-wrapper:before, .footer:before, .nav:before, #hmenu-bg:before, .sheet:before
+{
+	width: 100%;
+	content: " ";
+	display: table;
+}
 
 .header:after, #header-bg:after, .layout-cell:after, .layout-wrapper:after, .footer:after, .nav:after, #hmenu-bg:after, .sheet:after, .cleared, .clearfix:after
+{
+	clear: both;
+	font: 0/0 serif;
+	display: block;
+	content: " ";
+}
+
+.small_header:after, #header-bg:after, .layout-cell:after, .layout-wrapper:after, .footer:after, .nav:after, #hmenu-bg:after, .sheet:after, .cleared, .clearfix:after
 {
 	clear: both;
 	font: 0/0 serif;
@@ -468,14 +487,35 @@ li p, .postcontent li p, .blockcontent li p
 	width: 1000px;
 	z-index: auto !important;
 }
+.small_header
+{
+	margin: 0 auto;
+	height: 500px;
+	background-image: url('images/header.png');
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	position: relative;
+	width: 1000px;
+	z-index: auto !important;
+}
 
 .responsive .header
 {
 	background-image: url('images/header.png');
 	background-position: center center;
 }
+.responsive .small_header
+{
+	background-image: url('images/header.png');
+	background-position: center center;
+}
 
 .header>div.nostyle, .header>div.block, .header>div.post
+{
+	position: absolute;
+	z-index: 101;
+}
+.small_header>div.nostyle, .small_header>div.block, .small_header>div.post
 {
 	position: absolute;
 	z-index: 101;
@@ -580,7 +620,7 @@ nav.nav
 	background-position: center;
 }
 
-.container {
+.main-container {
 	position: relative;
 	height: 100%;
 	width: 100%;
@@ -592,7 +632,7 @@ nav.nav
 	transition:  left 0.4s ease-in-out;
 }
 
-.container.open-sidebar {
+.main-container.open-sidebar {
 	left: 130px;
 }
 
@@ -3438,21 +3478,13 @@ ul.categories-module li h1, ul.categories-module li h2, ul.categories-module li 
 {
 	height: 585px;
 }
+.small_header
+{
+	height: 120px;
+}
 /* End Additional CSS Styles */
 
-.rsform-submit-button {
-	background: #F33D3D;
-	border: none;
-	color: #fff;
-	padding: 12px 32px;
-	cursor: pointer;
-	text-transform: uppercase;
-	border-radius: 5px;
-	margin-left: 22%;
-}
 
-.rsform-submit-button:hover { opacity:0.7;
-}
 .main-content #sidebar-toggle {display:none!important;}
 #gallery-1-56a8f24381556 {visibility:visible!important;}
 
@@ -3469,6 +3501,7 @@ ul.categories-module li h1, ul.categories-module li h2, ul.categories-module li 
 	.pos31 {margin-left:45%;}
 	.pos38 {position:static;float:none;margin:auto;}
 	.header {width:100%!important;min-width:300px;display:block;margin:0;}
+	.small_header {width:100%!important;min-width:300px;display:block;margin:0;}
 	.desktop-nav {margin-top:480px;position:static;}
 	.nav {bottom: 30px;}
 
@@ -3484,6 +3517,7 @@ ul.categories-module li h1, ul.categories-module li h2, ul.categories-module li 
 @media screen and (max-width: 710px) {
 
 	.header {width:100%!important;min-width:300px;display:block;margin:0;}
+	.small_header {width:100%!important;min-width:300px;display:block;margin:0;}
 	body {min-width:250px;}
 	#main {background: #F0F0F0 url('images/page5.jpg') top center no-repeat scroll;}
 	.desktop-nav {margin-top:380px; position:static;}
@@ -3543,6 +3577,7 @@ ul.categories-module li h1, ul.categories-module li h2, ul.categories-module li 
 	.layout-cell {display:block;}
 	div.layout-cell.content {width:100%!important;display:block;float:none;margin:0;}
 	.header {background: #FFFFFF;height:150px;}
+	.small_header {background: #FFFFFF;height:150px;}
 	ul.hmenu {display:none;}
 	#main {min-width:250px;background: #FFFFFF;}
 	.logo-852579020 {width:100%;display:block;overflow:hidden;}
@@ -3671,6 +3706,7 @@ fieldset.formFieldset{
 }
 
 #zvonok-button{
+	display: inline-block;
 	width: 161px;
 	height: 39px;
 	background-image:url(images/but_1.png);
@@ -3683,6 +3719,7 @@ fieldset.formFieldset{
 }
 
 #konsultac-button{
+	display: inline-block;
 	width: 142px;
 	height: 39px;
 	background-image:url(images/but_11.png);
@@ -3697,6 +3734,10 @@ fieldset.formFieldset{
 #zakaz-form{
 	display:none;
 	background: #FFFFFF;
+	width: 50%;
+	border-radius: 5px;
+	margin: 0 auto;
+	position: static;
 }
 
 .name-tel{

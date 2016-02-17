@@ -1,0 +1,265 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+
+/* The html and body elements cannot have any padding or margin. */
+html,
+body {
+    height: 100%;
+}
+
+/* This replaces font from default bootstrap Helvertica to Google font*/
+*, body {
+    /*  font-family: 'Open Sans', sans-serif; */
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+    min-height: 100%;
+    height: auto;
+    /* Negative indent footer by its height */
+    margin: 0 auto -180px;
+    /* Pad bottom by footer height */
+    padding: 70px 0 180px;
+}
+
+/* heroshot */
+.bg-main-image {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 0;
+    padding-top: 10px;
+    min-height: 490px;
+    width:100%;
+    margin-top: -70px;
+}
+
+.bg-image-wrap {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    max-width: 1900px;
+    width: 100%;
+    height: 100%;
+}
+
+.bg-image {
+    /*max-width: 1900px;*/
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: -50%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.image-text-block {
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 6px;
+    margin-top: 70px;
+    margin-bottom: 1em;
+}
+
+/* std blocks */
+.page-block { padding-top: 1em; padding-bottom: 2em; }
+.page-block h2 { margin: 1em 0 1em; font-weight: bold; }
+#diffs { background-color:#eee }
+#facts { background-color:#fff }
+#facts h3 { font-size: 2.4em }
+#media { background-color:#eee; padding:20px 0 10px; }
+#media p.lead { margin: 10px 0; }
+
+.list-bordered li {
+    border-bottom: 1px dotted #ccc;
+    padding: 0.7em 0;
+}
+
+/* Set the fixed height of the footer here */
+#footer {
+    height: 180px;
+    background-color: #f5f5f5;
+}
+
+#footer .navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+.footer-one {
+    background-color: #333;
+}
+
+.footer-two .navbar-form {
+    padding-right: 0;
+}
+
+.btn-nav {
+    color: #999;
+    background-color: #222;
+    border-color: #222;
+}
+
+.btn-nav:hover,
+.btn-nav:focus,
+.btn-nav:active {
+    color: #fff;
+}
+
+.btn-group.open .btn-nav {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.navbar-phone {
+    font-size: 20px;
+    position: relative;
+    top: 6px;
+}
+
+.navbar-phone:hover {
+    text-decoration: none;
+}
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+/*
+#wrap > .container.padding-top {
+  padding-top: 60px !important;
+}
+*/
+
+.container .credit {
+    margin: 20px 0;
+}
+
+#footer > .container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+code {
+    font-size: 80%;
+}
+
+.clickable {
+    text-shadow: 0 1px 0 #ffffff;
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+}
+
+.clickable:hover,
+.clickable:focus {
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.table-break {
+    border-bottom: 2px solid #ddd;
+}
+
+.table-no-border-top {
+    border-top: 0 !important;
+}
+
+.table-no-bottom-margin {
+    margin-bottom: 0px;
+}
+
+/*
+Super button
+ */
+.btn-xlg {
+    padding: 10px 16px;
+    font-size: 28px;
+    line-height: 1.33;
+    border-radius: 6px;
+}
+
+/*
+Select 2 and Bootstrap3 style for input-lg
+ */
+.select2-container.input-lg {
+    padding: 0;
+}
+.select2-container.input-lg .select2-choice {
+    line-height: 225%;
+    height: inherit;
+}
+.select2-container.input-lg .select2-choice .select2-arrow b {
+    background-position: 0 8px;
+}
+
+.select2-container.input-lg .select2-choice abbr {
+    top: 14px;
+}
+
+/*
+Bootstrap 3 customizing
+ */
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+    border: 2px solid #5bc0de;
+    outline: 0;
+    outline: thin dotted \9;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(82,168,236,0.6);
+    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(82,168,236,0.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(82,168,236,0.6);
+
+}
+
+/*
+Make video responsive
+ */
+.js-video {
+    height: 0;
+    padding-top: 25px;
+    padding-bottom: 67.5%;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.js-video.vimeo {
+    padding-top: 0;
+}
+.js-video.widescreen {
+    padding-bottom: 57.25%;
+}
+.js-video embed, .js-video iframe, .js-video object, .js-video video {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    .js-video {
+        padding-top: 0;
+    }
+}
+
+/* Iframes */
+iframe {
+    border: 0px;
+}

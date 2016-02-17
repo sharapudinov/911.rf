@@ -1,0 +1,266 @@
+* {
+	font-family: 'PT Sans', 'Roboto', Ubuntu, Arial, sans-serif;
+}
+
+#reformal_tab, #footer, #site-nav-bar {
+	display: none !important;
+}
+
+#simple-quote-request-modal h3.simple-quote-request-modal-header {
+	margin: 0 0 1em;
+}
+
+#simple-quote-request-modal .text-muted {
+	display: none;
+}
+
+body.operator-available .operator-unavailable {
+	display: none !important;
+}
+
+body.operator-unavailable .operator-available {
+	display: none !important;
+}
+
+#landing-nav .navbar-brand,
+#landing-nav .navbar-text .phone {
+	font-weight: 700;
+}
+
+#wrap {
+	padding: 50px 0
+}
+
+@media (min-width: 768px) {
+	#wrap {
+		padding: 90px 0
+	}
+
+	#landing-nav {
+		min-height: 90px
+	}
+
+	#landing-nav .navbar-nav > li > a {
+		font-size: 1.2em;
+		line-height: 60px
+	}
+
+	#landing-nav .navbar-brand,
+	#landing-nav .navbar-text .phone {
+		font-size: 2em;
+		line-height: inherit;
+		height: auto
+	}
+
+	#landing-nav .navbar-brand {
+		line-height: 60px;
+		height: auto
+	}
+
+	#landing-nav .navbar-right {
+		margin-left: 3em;
+		text-align: center
+	}
+}
+
+
+#header .title-block {
+	background-color: rgba(256, 256, 256, 0.85);
+	padding: 10px 30px 20px
+}
+
+#price h1,
+#how h1,
+#no-weekend h1,
+#feedback h1 {
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: -1px
+}
+
+#header h1 {
+	font-weight: 600;
+	letter-spacing: -1px
+}
+
+#header h2 {
+	letter-spacing: -1px
+}
+
+@media screen and (min-width: 768px) {
+	.jumbotron h1 {
+		font-size: 45px
+	}
+
+	#header {
+		padding-top: 108px
+	}
+
+	.table {
+		font-size: 1.3em
+	}
+}
+
+.jumbotron {
+	margin-bottom: 0px
+}
+ .advantages {
+	 padding-top: 40px;
+	 padding-bottom: 60px
+ }
+
+.advantages .box-content {
+	padding-left: 6em;
+	position: relative;
+	margin-bottom: 30px
+}
+
+.advantages .box-content .icon {
+	position: absolute;
+	left: 0;
+	top: 0px
+}
+
+.advantages h2 {
+	font-weight: 600
+}
+ #how {
+	 color: white;
+	 background-color: #428bca;
+	 margin-bottom: 0px;
+	 padding-top: 90px;
+	 padding-bottom: 90px
+ }
+
+#how h1, #how h2 {
+	margin-bottom: 1.5em
+}
+.advantages {
+	 padding-top: 40px;
+	 padding-bottom: 60px
+ }
+
+.advantages .box-content {
+	padding-left: 6em;
+	position: relative;
+	margin-bottom: 30px
+}
+
+.advantages .box-content .icon {
+	position: absolute;
+	left: 0;
+	top: 0px
+}
+
+.advantages h2 {
+	font-weight: 600
+}
+
+#advantages_sec .box-content p {
+	font-size: 1.2em
+}
+
+@media (max-device-width: 568px) {
+	.advantages .box-content {
+		padding-left: 3em;
+	}
+
+	.advantages .box-content .icon {
+		font-size: 2.3em
+	}
+}
+ #price {
+	 padding-top: 70px;
+	 padding-bottom: 70px
+ }
+
+#price h1 {
+	margin-bottom: 1em
+}
+
+.mb {
+	margin-bottom: 40px
+}
+
+.mtb {
+	margin-bottom: 40px;
+	margin-top: 40px
+}
+
+.prices h3 {
+	font-weight: 400;
+	color: #da564a;
+	/*  background: #da564a;
+      color: white;*/
+	text-transform: uppercase;
+}
+
+.prices ul {
+	padding: 0
+}
+
+.prices li {
+	list-style-type: none;
+	border-bottom: 1px solid #cccccc;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+.btn-red {
+	background: #da564a;
+	color: white;
+	margin: 8px;
+}
+
+.centered {
+	text-align: center
+}
+<!-- end ikonostas -->
+
+ #feedback {
+	 padding: 0
+ }
+
+#feedback footer {
+	color: white;
+	font-weight: 600
+}
+
+#feedback #carousel-feedback .item {
+	padding: 5em 7.5%
+}
+
+#carousel-feedback .carousel-control {
+	width: 5%
+}
+
+#feedback h1 {
+	margin-bottom: 0;
+	margin-top: 0
+}
+
+#carousel-feedback {
+	padding-top: 60px
+}
+
+#feedback .item blockquote {
+	font-size: 1.8em
+}
+ h1.footer-phone {
+	 margin: 1em 0 2em;
+ }
+
+.footer-phone .phone {
+	font-weight: 700
+}
+ #tv h1 {
+	 text-transform: uppercase;
+	 font-weight: 600;
+	 letter-spacing: -1px
+ }
+
+#tv {
+	background-color: white;
+	padding-top: 40px;
+	padding-bottom: 60px
+}

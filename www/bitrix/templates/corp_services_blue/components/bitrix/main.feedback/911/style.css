@@ -1,0 +1,36 @@
+input.rsform-input-box {
+    height: 50px;
+    font-size: 30px!important;
+}
+
+div.mf-message textarea {
+    /*width: 60%;*/
+}
+
+.rsform-submit-button {
+    background: #F33D3D;
+    border: none;
+    color: #fff;
+    padding: 12px 32px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 5px;
+    width: 30%;
+    height: auto;
+}
+.rsform-submit-button a{
+    word-wrap: break-word;
+}
+
+.rsform-submit-button:hover { opacity:0.7;
+}
+
+span.mf-req {
+    color: red;
+}
+
+div.mf-ok-text {
+    color: green;
+    font-weight: bold;
+    padding-bottom: 1em;
+}
