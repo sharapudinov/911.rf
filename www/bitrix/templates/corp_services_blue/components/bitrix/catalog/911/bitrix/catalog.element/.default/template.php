@@ -26,7 +26,8 @@ $this->setFrameMode(true); ?>
                 <div class="container">
                     <div class="row">
             <div class="col-md-12 title-block">
-                <h1>Рассчитайте стоимость услуги "<?= $arResult['NAME'] ?>" для вашего автомобиля </h1>
+                <h1><?= $arResult['NAME'] ?></br> для всех видов автомобилей</h1>
+                <p class="clearfix"></p>
                 <h2><?= $arResult['PREVIEW_TEXT'] ?></h2>
 
                 <!-- кнопка -->
@@ -45,8 +46,7 @@ $this->setFrameMode(true); ?>
                 <!/-- кнопка -->
                 <p class="clearfix"></p>
                 <div class="text-muted text-center">
-                    <small>Для оформления запроса, пожалуйста, приготовьте свидетельство о регистрации ТС
-                    </small>
+                    <small>Оставьте заявку и получите купон на 1 000 руб. на все виды услуг</small>
                 </div>
             </div>
         </div>
@@ -57,20 +57,20 @@ $this->setFrameMode(true); ?>
     <div class="container">
         <div class="row">
             <div class="col-sm-6 text-center">
-                <p><i class="icon fa fa-clock-o fa-4x text-success"></i></p>
-                <h2>+4&nbsp;часа к&nbsp;вашей жизни</h2>
+                <p><i class="icon fa fa-rub fa-4x text-success"></i></p>
+                <h2>Прозрачная цена</h2>
+                <p class="clearfix"></p>
                 <p>
-                    Вы&nbsp;не&nbsp;теряете 2&nbsp;часа на&nbsp;дорогу и&nbsp;2&nbsp;часа пустого ожидания в&nbsp;сервисе.
-                    Мы&nbsp;приедем в&nbsp;выбранное вами место и&nbsp;время: на&nbsp;парковку у&nbsp;дома или
-                    офиса, гараж или дачу.
+                    Цена на покраску и ремонтные работы останется неизменной - без дополнительных затрат и наценок на детали.
                 </p>
             </div>
             <div class="col-sm-6 text-center">
-                <p><i class="icon fa fa-home fa-4x text-success"></i></p>
-                <h2>+5&nbsp;к комфорту</h2>
+                <p><i class="icon fa fa-book fa-4x text-success"></i></p>
+                <h2>Гарантия 12 месяцев</h2>
+                <p class="clearfix"></p>
                 <p>
-                    Никаких хлопот и&nbsp;полный комфорт, если у&nbsp;вас нет запчастей. Мы&nbsp;сами купим и&nbsp;привезем
-                    вам запчасти по&nbsp;ценам популярных интернет-магазинов до&nbsp;30% ниже, чем у&nbsp;дилера.
+                    Мы предоставляем гарантию 12 месяцев на все покрасочные и ремонтные работы.
+
                 </p>
             </div>
         </div>
@@ -86,28 +86,28 @@ $this->setFrameMode(true); ?>
 				<i class="fa fa-circle-thin fa-stack-2x"></i>
 				<i class="fa fa-stack-1x fa-inverse"><strong>1</strong></i>
 				</span>
-                <h2>Сообщите нам пробег и&nbsp;марку автомобиля</h2>
+                <h2>Вы оставляете заявку</br> на обратный звонок</br> или звоните нам сами </h2>
             </div>
             <div class="col-md-3 col-sm-6">
 				<span class="fa-stack fa-3x">
 				<i class="fa fa-circle-thin fa-stack-2x fa-inverse"></i>
 				<i class="fa fa-stack-1x fa-inverse"><strong>2</strong></i>
 				</span>
-                <h2>Нет запчастей? Цены на&nbsp;наши запчасти до&nbsp;30% ниже, чем у&nbsp;дилера</h2>
+                <h2>Вы приезжаете в наш сервис,</br> наш специалист проводит</br> осмотр автомобиля</br> и согласовывает стоимость работы </h2>
             </div>
             <div class="col-md-3 col-sm-6">
 				<span class="fa-stack fa-3x">
 				<i class="fa fa-circle-thin fa-stack-2x fa-inverse"></i>
 				<i class="fa fa-stack-1x fa-inverse"><strong>3</strong></i>
 				</span>
-                <h2>Выберите удобное место и&nbsp;время</h2>
+                <h2>Мы проводим полный цикл</br> покрасочных и ремонтных работ</h2>
             </div>
             <div class="col-md-3 col-sm-6">
 				<span class="fa-stack fa-3x">
 				<i class="fa fa-circle-thin fa-stack-2x fa-inverse"></i>
 				<i class="fa fa-stack-1x fa-inverse"><strong>4</strong></i>
 				</span>
-                <h2>Мастер приедет и&nbsp;проведет работы</h2>
+                <h2>АВТОМОБИЛЬ ГОТОВ! </br>Можете ехать! </h2>
             </div>
         </div>
     </div>
@@ -131,7 +131,7 @@ $this->setFrameMode(true); ?>
 
                    id="cta1|podat-zayavku"
 
-                   role="button"><span class="hidden-xs"> Заказать <?=strtolower($arResult['NAME'])?>.</span></span></a>
+                   role="button"><span class="hidden-xs"> Заказать <?=strtolower($arResult['NAME'])?></span></span></a>
             </div>
         </div>
         <!/-- кнопка -->
@@ -145,12 +145,9 @@ $this->setFrameMode(true); ?>
             <div class="col-md-7">
                 <div class="box-content">
                     <i class="icon fa fa-wrench fa-5x text-success"></i>
-                    <h2>Мастера готовы к выездному обслуживанию</h2>
+                    <h2>Только опытные сотрудники</h2>
                     <p>
-                        Мы&nbsp;отбираем мастеров со&nbsp;стажем не&nbsp;менее 10&nbsp;лет, которым скучно
-                        сидеть в&nbsp;сервисе. У&nbsp;них всегда с&nbsp;собой инструменты для непредвиденных
-                        ситуаций: могут разобрать и&nbsp;собрать машину на&nbsp;месте и&nbsp;починить Harley
-                        Davidson. Однажды наш механик на&nbsp;выезде починил самолет.
+                        Специалисты нашего сервиса – профессионалы с опытом работы более 10 лет в сфере покраски и ремонта авто.
                     </p>
                 </div>
                 <div class="box-content">
@@ -158,8 +155,7 @@ $this->setFrameMode(true); ?>
                     <h2>Открытость</h2>
                     <p>
                         Мастер согласует список работ заранее. Если обнаружит скрытую проблему и&nbsp;сможет ее&nbsp;исправить
-                        на&nbsp;месте&nbsp;&mdash; согласует с&nbsp;вами сроки и&nbsp;цену. Если проблему нельзя
-                        решить на&nbsp;месте, мастер посоветует, что делать дальше.
+                        &mdash; согласует с&nbsp;вами сроки и&nbsp;цену.
                     </p>
                 </div>
                 <div class="box-content">
@@ -202,8 +198,7 @@ $this->setFrameMode(true); ?>
 <div class="container-fluid jumbotron" id="price">
     <div class="container">
         <h1 class="text-center">Сколько стоит</h1>
-        <h2 class="text-center">Вызов механика <strong><?=$arResult['PROPERTIES']['PRICE']['VALUE']?></strong>, стоимость работы от <strong>2000
-                рублей</strong> в час</h2>
+        <h2 class="text-center">Стоимость работ начиется от <strong><?=$arResult['PROPERTIES']['PRICE']['VALUE']?></strong> руб. для автомобиля любой марки</h2>
         <p>&nbsp;</p>
         <!-- пример цен -->
         <h4 class="text-center">выполненные заказы<br/>

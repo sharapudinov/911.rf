@@ -122,6 +122,7 @@ IncludeTemplateLangFile(__FILE__);
 
                         </div>
                     </div>
+                    <!--
                     <div class="pos37">
                         <div class="nostyle">
                             <div class="name-tel">
@@ -130,10 +131,11 @@ IncludeTemplateLangFile(__FILE__);
                             </div>
                         </div>
                     </div>
+                    -->
 
                     <ul class="slogan" data-left="81.17%">
-                        <li>8 (964) 7777-903</li>
-                        <li>8 (909) 9613-999</li>
+                        <li>+7 (964) 7777-903</li>
+                        <!--<li>8 (909) 9613-999</li>-->
                     </ul>
 
                     <a href="/" data-left="1.35%" class="logo-852579020">

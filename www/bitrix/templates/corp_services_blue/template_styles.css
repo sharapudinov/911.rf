@@ -449,9 +449,9 @@ li p, .postcontent li p, .blockcontent li p
 
 .slogan, .slogan a, .slogan a:link, .slogan a:visited, .slogan a:hover
 {
-	font-size: 21px;
+	font-size: 37px;
 	font-family: 'PT Sans', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
-	font-weight: normal;
+	font-weight: bold;
 	font-style: normal;
 	text-decoration: none;
 	text-align: left;
