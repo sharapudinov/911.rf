@@ -74,7 +74,7 @@ IncludeTemplateLangFile(__FILE__);
                             <div class="service-info">
                                 <p>Тагильская, 4, стр. 15</p>
                                 <p><span>Автосервис 911, г. Москва</span></p>
-                                <p>с 09:00 до 21:00</p>
+                                <p>с 10:00 до 20:00</p>
                                 <a href="<?=$is_landing?'#location':'contacts/'?>" class="pos32"><span>смотреть на карте</span></a>
                             </div>
                         </div>
