@@ -21,7 +21,7 @@ IncludeTemplateLangFile(__FILE__);
               href="//fonts.googleapis.com/css?family=Ubuntu&amp;subset=latin,cyrillic"/>
         <!-- Global CSS -->
     <? endif ?>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1   /jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <!-- Слайдер -->
     <? $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/mobilyslider.js') ?>
@@ -62,7 +62,7 @@ IncludeTemplateLangFile(__FILE__);
             ); ?>
         </div>
         <div class="main-content">
-            <a href="#" data-toggle=".container" id="sidebar-toggle">
+            <a href="#" data-toggle=".main-container" id="sidebar-toggle">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -75,7 +75,7 @@ IncludeTemplateLangFile(__FILE__);
                                 <p>Тагильская, 4, стр. 15</p>
                                 <p><span>Автосервис 911, г. Москва</span></p>
                                 <p>с 09:00 до 21:00</p>
-                                <a href="/contacts/" class="pos32"><span>смотреть на карте</span></a>
+                                <a href="<?=$is_landing?'#location':'contacts/'?>" class="pos32"><span>смотреть на карте</span></a>
                             </div>
                         </div>
                     </div>

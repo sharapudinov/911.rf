@@ -198,7 +198,7 @@ $this->setFrameMode(true); ?>
 <div class="container-fluid jumbotron" id="price">
     <div class="container">
         <h1 class="text-center">Сколько стоит</h1>
-        <h2 class="text-center">Стоимость работ начиется от <strong><?=$arResult['PROPERTIES']['PRICE']['VALUE']?></strong> руб. для автомобиля любой марки</h2>
+        <h2 class="text-center">Стоимость работ начиется от <strong><?=$arResult['PROPERTIES']['PRICE']['VALUE']?> руб.</strong> для автомобиля любой марки</h2>
         <p>&nbsp;</p>
         <!-- пример цен -->
         <h4 class="text-center">выполненные заказы<br/>
@@ -243,16 +243,14 @@ $this->setFrameMode(true); ?>
 
         <p>&nbsp;</p>
 
-        <h3 class="text-center"><strong>Выберите готовый пакет техобслуживания от МОЙМЕХАНИК &ndash; экономия
-                более 500 рублей</strong></h3>
-        <h3 class="text-center">или техобслуживание <a href="#callbackhunter">рекомендованное производителем
-                по пробегу</a></h3>
+        <h3 class="text-center"><strong>Мы предлагаем полный спектр услуг по ремонту автомобиля и его техобслуживанию!</strong></h3>
+        <h3 class="text-center">Наши мастера выполнят <a href="#callbackhunter"><?= $arResult['NAME'] ?></a> любой сложности!</h3>
 
         <div class="row mtb text-center">
             <div class="1col-md-10 1col-md-offset-1">
                 <div class="col-md-4 prices">
                     <h3 class="mb"><?= $arResult['PROPERTIES']['FIRST_OFFER']['arEl']['NAME'] ?><br/>
-                        <small><?= $arResult['PROPERTIES']['FIRST_OFFER']['arEl']['PROPERTY_PRICE_VALUE'] ?> руб</small>
+                        <small>от <?= $arResult['PROPERTIES']['FIRST_OFFER']['arEl']['PROPERTY_PRICE_VALUE'] ?> руб</small>
                     </h3>
                     <ul class="mb">
                         <? foreach ($arResult['PROPERTIES']['FIRST_OFFER']['arEl']['PROPERTY_TYPES_WORK_VALUE'] as $work_type): ?>
@@ -265,7 +263,7 @@ $this->setFrameMode(true); ?>
 
                 <div class="col-md-4 prices recommended">
                     <h3 class="mb"><?= $arResult['PROPERTIES']['SECOND_OFFER']['arEl']['NAME'] ?><br/>
-                        <small><?= $arResult['PROPERTIES']['SECOND_OFFER']['arEl']['PROPERTY_PRICE_VALUE'] ?>руб
+                        <small>от <?= $arResult['PROPERTIES']['SECOND_OFFER']['arEl']['PROPERTY_PRICE_VALUE'] ?>руб
                         </small>
                     </h3>
                     <ul class="mb">
@@ -279,7 +277,7 @@ $this->setFrameMode(true); ?>
 
                 <div class="col-md-4 prices">
                     <h3 class="mb"><?= $arResult['PROPERTIES']['THIRD_OFFER']['arEl']['NAME'] ?><br/>
-                        <small><?= $arResult['PROPERTIES']['THIRD_OFFER']['arEl']['PROPERTY_PRICE_VALUE'] ?> руб</small>
+                        <small>от <?= $arResult['PROPERTIES']['THIRD_OFFER']['arEl']['PROPERTY_PRICE_VALUE'] ?> руб</small>
                     </h3>
                     <ul class="mb">
                         <? foreach ($arResult['PROPERTIES']['THIRD_OFFER']['arEl']['PROPERTY_TYPES_WORK_VALUE'] as $work_type): ?>
@@ -360,7 +358,7 @@ $this->setFrameMode(true); ?>
             <a class="btn btn-danger btn-xlg btn-block click-event"
                id="cta3|do_action"
                href="#callbackhunter"
-               role="button"><span class="hidden-xs"> Заказать <?=strtolower($arResult['NAME'])?>.</span><span
+               role="button"><span class="hidden-xs"> Заказать <?=strtolower($arResult['NAME'])?></span><span
                     class="visible-xs">Провести ТО</span></a>
         </div>
     </div>
@@ -408,4 +406,3 @@ $this->setFrameMode(true); ?>
         </div>
     </div>
 </div>
-
