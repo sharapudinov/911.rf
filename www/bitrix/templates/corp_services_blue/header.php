@@ -62,7 +62,7 @@ IncludeTemplateLangFile(__FILE__);
             ); ?>
         </div>
         <div class="main-content">
-            <a href="#" data-toggle=".container" id="sidebar-toggle">
+            <a href="#" data-toggle=".main-container" id="sidebar-toggle">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -74,8 +74,8 @@ IncludeTemplateLangFile(__FILE__);
                             <div class="service-info">
                                 <p>Тагильская, 4, стр. 15</p>
                                 <p><span>Автосервис 911, г. Москва</span></p>
-                                <p>с 09:00 до 21:00</p>
-                                <a href="/contacts/" class="pos32"><span>смотреть на карте</span></a>
+                                <p>с 10:00 до 20x   :00</p>
+                                <a href="<?=$is_landing?'#location':'contacts/'?>" class="pos32"><span>смотреть на карте</span></a>
                             </div>
                         </div>
                     </div>

@@ -11,20 +11,20 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true); ?>
-<!--<pre><?/*
-    print_r($arResult);*/?>
-            </pre>-->
-            <style>
-                #header {
-                    background: #aaa url("<?=$arResult['PREVIEW_PICTURE']['SRC']?>");
-                    background-size: cover;
-                    background-position: center center
-                }
-            </style>
+<?
+//test_dump($arResult);
+?>
+<style>
+    #header {
+        background: #aaa url("<?=$arResult['PREVIEW_PICTURE']['SRC']?>");
+        background-size: cover;
+        background-position: center center
+    }
+</style>
 
-            <div class="jumbotron" id="header">
-                <div class="container">
-                    <div class="row">
+<div class="jumbotron" id="header">
+    <div class="container">
+        <div class="row">
             <div class="col-md-12 title-block">
                 <h1><?= $arResult['NAME'] ?></br> для всех видов автомобилей</h1>
                 <p class="clearfix"></p>
@@ -36,11 +36,11 @@ $this->setFrameMode(true); ?>
                     <div class="col-sm-8 col-sm-offset-2">
                         <a class="btn btn-danger btn-xlg btn-block click-event"
 
-                           href="#callbackhunter"
+                           href="#price"
 
                            id="cta0|calculate-price"
 
-                           role="button">Рассчитать стоимость</a>
+                           role="button">Узнать стоимость</a>
                     </div>
                 </div>
                 <!/-- кнопка -->
@@ -61,7 +61,8 @@ $this->setFrameMode(true); ?>
                 <h2>Прозрачная цена</h2>
                 <p class="clearfix"></p>
                 <p>
-                    Цена на покраску и ремонтные работы останется неизменной - без дополнительных затрат и наценок на детали.
+                    Цена на покраску и ремонтные работы останется неизменной - без дополнительных затрат и наценок на
+                    детали.
                 </p>
             </div>
             <div class="col-sm-6 text-center">
@@ -93,7 +94,8 @@ $this->setFrameMode(true); ?>
 				<i class="fa fa-circle-thin fa-stack-2x fa-inverse"></i>
 				<i class="fa fa-stack-1x fa-inverse"><strong>2</strong></i>
 				</span>
-                <h2>Вы приезжаете в наш сервис,</br> наш специалист проводит</br> осмотр автомобиля</br> и согласовывает стоимость работы </h2>
+                <h2>Вы приезжаете в наш сервис,</br> наш специалист проводит</br> осмотр автомобиля</br> и согласовывает
+                    стоимость работы </h2>
             </div>
             <div class="col-md-3 col-sm-6">
 				<span class="fa-stack fa-3x">
@@ -131,14 +133,14 @@ $this->setFrameMode(true); ?>
 
                    id="cta1|podat-zayavku"
 
-                   role="button"><span class="hidden-xs"> Заказать <?=strtolower($arResult['NAME'])?></span></span></a>
+                   role="button"><span class="hidden-xs"> Заказать</span></span>
+                </a>
             </div>
         </div>
         <!/-- кнопка -->
 
     </div>
 </div>
-
 <div class="container-fluid advantages" id="advantages_sec">
     <div class="container">
         <div class="row">
@@ -147,7 +149,8 @@ $this->setFrameMode(true); ?>
                     <i class="icon fa fa-wrench fa-5x text-success"></i>
                     <h2>Только опытные сотрудники</h2>
                     <p>
-                        Специалисты нашего сервиса – профессионалы с опытом работы более 10 лет в сфере покраски и ремонта авто.
+                        Специалисты нашего сервиса – профессионалы с опытом работы более 10 лет в сфере покраски и
+                        ремонта авто.
                     </p>
                 </div>
                 <div class="box-content">
@@ -187,7 +190,7 @@ $this->setFrameMode(true); ?>
             </div>
             <div class="col-md-5 text-center">
                 <div class="thumbnail">
-                    <img src="<?=$arResult['DETAIL_PICTURE']['SRC']?>" class="img-responsive"/>
+                    <img src="<?= $arResult['DETAIL_PICTURE']['SRC'] ?>" class="img-responsive"/>
                 </div>
             </div>
         </div>
@@ -198,100 +201,43 @@ $this->setFrameMode(true); ?>
 <div class="container-fluid jumbotron" id="price">
     <div class="container">
         <h1 class="text-center">Сколько стоит</h1>
-        <h2 class="text-center">Стоимость работ начиется от <strong><?=$arResult['PROPERTIES']['PRICE']['VALUE']?> руб.</strong> для автомобиля любой марки</h2>
-        <p>&nbsp;</p>
         <!-- пример цен -->
-        <h4 class="text-center">выполненные заказы<br/>
-            <small>(в стоимость включены запчасти)</small>
-        </h4>
         <table class="table table-hover">
             <thead>
             <tr>
-                <th>Автомобиль</th>
-                <th class="text-center">Пробег (км)</th>
+                <th>Вид работы</th>
                 <th class="text-center">Цены по Москве (руб)</th>
-                <th class="success text-center lead">Автосервис 911 (руб)</th>
+                <th class="success text-center lead">Наши цены (руб)</th>
             </tr>
             </thead>
             <tbody>
+            <? foreach ($arResult['PROPERTIES']['WORK_TYPES']['arEl'] as $work_type): ?>
             <tr>
-                <td>Mitsubishi Outlander&nbsp;XL 2.4 4WD (2008)</td>
-                <td class="text-center">90&nbsp;000</td>
-                <td class="text-center"><?= $arResult['PROPERTIES']['MITSUBISHI_PRICE']['VALUE'] * 1.1 ?></td>
-                <td class="success text-center lead"><?= $arResult['PROPERTIES']['MITSUBISHI_PRICE']['VALUE'] ?></td>
-            </tr>
-            <tr>
-                <td>Honda CR-V 2.4 (2010)</td>
-                <td class="text-center">60&nbsp;000</td>
-                <td class="text-center"><?= $arResult['PROPERTIES']['HONDA_PRICE']['VALUE'] * 1.1 ?></td>
-                <td class="success text-center lead"><?= $arResult['PROPERTIES']['HONDA_PRICE']['VALUE'] ?></td>
-            </tr>
-            <tr>
-                <td>Volkswagen Polo 1.6 (2011)</td>
-                <td class="text-center">60&nbsp;000</td>
-                <td class="text-center"><?= $arResult['PROPERTIES']['FORD_PRICE']['VALUE'] * 1.1 ?></td>
-                <td class="success text-center lead"><?= $arResult['PROPERTIES']['FORD_PRICE']['VALUE'] ?></td>
-            </tr>
-            <tr>
-                <td>Ford Focus 1.4 (2004)</td>
-                <td class="text-center">100&nbsp;000</td>
-                <td class="text-center"><?= $arResult['PROPERTIES']['VOLKSWAGEN_PRICE']['VALUE'] * 1.1 ?></td>
-                <td class="success text-center lead"><?= $arResult['PROPERTIES']['VOLKSWAGEN_PRICE']['VALUE'] ?></td>
+                <td><?= $work_type['NAME'] ?> </td>
+                <td class="text-center"><?= $work_type['PROPERTY_PRICE_VALUE'] * 1.1 ?></td>
+                <td class="success text-center lead"><?= $work_type['PROPERTY_PRICE_VALUE'] ?></td>
             </tr>
             </tbody>
+            <? endforeach ?>
         </table>
+        <!-- кнопка -->
+        <p class="clearfix">&nbsp;</p>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <a class="btn btn-danger btn-xlg btn-block click-event"
 
-        <p>&nbsp;</p>
+                   href="#callbackhunter"
 
-        <h3 class="text-center"><strong>Мы предлагаем полный спектр услуг по ремонту автомобиля и его техобслуживанию!</strong></h3>
-        <h3 class="text-center">Наши мастера выполнят <a href="#callbackhunter"><?= $arResult['NAME'] ?></a> любой сложности!</h3>
+                   id="cta1|podat-zayavku"
 
-        <div class="row mtb text-center">
-            <div class="1col-md-10 1col-md-offset-1">
-                <div class="col-md-4 prices">
-                    <h3 class="mb"><?= $arResult['PROPERTIES']['FIRST_OFFER']['arEl']['NAME'] ?><br/>
-                        <small>от <?= $arResult['PROPERTIES']['FIRST_OFFER']['arEl']['PROPERTY_PRICE_VALUE'] ?> руб</small>
-                    </h3>
-                    <ul class="mb">
-                        <? foreach ($arResult['PROPERTIES']['FIRST_OFFER']['arEl']['PROPERTY_TYPES_WORK_VALUE'] as $work_type): ?>
-                            <li><?= $work_type ?></li>
-                        <? endforeach ?>
-                    </ul>
-                    <a href="#callbackhunter" class="btn btn-lg btn-red click-event" role="button"
-                       id="cta2|to-mm1">Заказать за <?= $arResult['PROPERTIES']['FIRST_OFFER']['arEl']['PROPERTY_PRICE_VALUE'] ?> руб</a>
-                </div>
-
-                <div class="col-md-4 prices recommended">
-                    <h3 class="mb"><?= $arResult['PROPERTIES']['SECOND_OFFER']['arEl']['NAME'] ?><br/>
-                        <small>от <?= $arResult['PROPERTIES']['SECOND_OFFER']['arEl']['PROPERTY_PRICE_VALUE'] ?>руб
-                        </small>
-                    </h3>
-                    <ul class="mb">
-                        <? foreach ($arResult['PROPERTIES']['SECOND_OFFER']['arEl']['PROPERTY_TYPES_WORK_VALUE'] as $work_type): ?>
-                            <li><?= $work_type ?></li>
-                        <? endforeach ?>
-                    </ul>
-                    <a href="#callbackhunter" class="btn btn-lg btn-red click-event" role="button"
-                       id="cta2|to-mm2">Заказать за <?= $arResult['PROPERTIES']['SECOND_OFFER']['arEl']['PROPERTY_PRICE_VALUE'] ?> руб</a>
-                </div>
-
-                <div class="col-md-4 prices">
-                    <h3 class="mb"><?= $arResult['PROPERTIES']['THIRD_OFFER']['arEl']['NAME'] ?><br/>
-                        <small>от <?= $arResult['PROPERTIES']['THIRD_OFFER']['arEl']['PROPERTY_PRICE_VALUE'] ?> руб</small>
-                    </h3>
-                    <ul class="mb">
-                        <? foreach ($arResult['PROPERTIES']['THIRD_OFFER']['arEl']['PROPERTY_TYPES_WORK_VALUE'] as $work_type): ?>
-                            <li><?= $work_type ?></li>
-                        <? endforeach ?>
-                    </ul>
-                    <a href="#callbackhunter" class="btn btn-lg btn-red click-event" role="button"
-                       id="cta2|to-mm3">Заказать за <?= $arResult['PROPERTIES']['THIRD_OFFER']['arEl']['PROPERTY_PRICE_VALUE'] ?> руб</a>
-                </div>
-            </div><!--/col-md-10 -->
+                   role="button"><span class="hidden-xs"> Заказать</span></span>
+                </a>
+            </div>
         </div>
-
+        <!/-- кнопка -->
     </div>
 </div><!-- ikonostas -->
+
 
 <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModal"
      aria-hidden="true">
@@ -319,24 +265,24 @@ $this->setFrameMode(true); ?>
 
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
-                <?foreach($arResult['PROPERTIES']['VIDEO']['arEl'] as $key=>$video_item):?>
-                <div class="item <?=$key==0?'active':''?>">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="js-video vimeo widescreen">
-                                <iframe src="//<?=$video_item['~PREVIEW_TEXT']?>" width="500" height="281"
-                                        frameborder="0" webkitallowfullscreen mozallowfullscreen
-                                        allowfullscreen></iframe>
+                <? foreach ($arResult['PROPERTIES']['VIDEO']['arEl'] as $key => $video_item): ?>
+                    <div class="item <?= $key == 0 ? 'active' : '' ?>">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="js-video vimeo widescreen">
+                                    <iframe src="//<?= $video_item['~PREVIEW_TEXT'] ?>" width="500" height="281"
+                                            frameborder="0" webkitallowfullscreen mozallowfullscreen
+                                            allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <blockquote>
+                                    <p><?= $video_item['DETAIL_TEXT'] ?>
+                                </blockquote>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <blockquote>
-                                <p><?=$video_item['DETAIL_TEXT']?>
-                            </blockquote>
-                        </div>
                     </div>
-                </div>
-               <?endforeach?>
+                <? endforeach ?>
             </div>
 
             <!-- Controls -->
@@ -358,8 +304,8 @@ $this->setFrameMode(true); ?>
             <a class="btn btn-danger btn-xlg btn-block click-event"
                id="cta3|do_action"
                href="#callbackhunter"
-               role="button"><span class="hidden-xs"> Заказать <?=strtolower($arResult['NAME'])?></span><span
-                    class="visible-xs">Провести ТО</span></a>
+               role="button"><span class="hidden-xs"> Заказать </span><span
+                    class="visible-xs">Заказать</span></a>
         </div>
     </div>
 </div>
