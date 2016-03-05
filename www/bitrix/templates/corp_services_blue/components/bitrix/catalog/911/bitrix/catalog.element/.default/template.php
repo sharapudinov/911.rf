@@ -61,7 +61,7 @@ $this->setFrameMode(true); ?>
                 <h2>Прозрачная цена</h2>
                 <p class="clearfix"></p>
                 <p>
-                    Цена на ремонтные работы останется неизменной - без дополнительных затрат и наценок на детали.
+                    Цена на покраску и ремонтные работы останется неизменной - без дополнительных затрат и наценок на детали.
                 </p>
             </div>
             <div class="col-sm-6 text-center">
@@ -69,7 +69,7 @@ $this->setFrameMode(true); ?>
                 <h2>Гарантия 12 месяцев</h2>
                 <p class="clearfix"></p>
                 <p>
-                    Мы предоставляем гарантию 12 месяцев или 12 000 км на все ремонтные работы в нашем автосервисе.
+                    Мы предоставляем гарантию 12 месяцев на все покрасочные и ремонтные работы.
 
                 </p>
             </div>
@@ -86,7 +86,7 @@ $this->setFrameMode(true); ?>
 				<i class="fa fa-circle-thin fa-stack-2x"></i>
 				<i class="fa fa-stack-1x fa-inverse"><strong>1</strong></i>
 				</span>
-                <h2>Вы оставляете заявку</br> на обратный звонок</br> или звоните нам сами</h2>
+                <h2>Вы оставляете заявку</br> на обратный звонок</br> или звоните нам сами </h2>
             </div>
             <div class="col-md-3 col-sm-6">
 				<span class="fa-stack fa-3x">
@@ -100,7 +100,7 @@ $this->setFrameMode(true); ?>
 				<i class="fa fa-circle-thin fa-stack-2x fa-inverse"></i>
 				<i class="fa fa-stack-1x fa-inverse"><strong>3</strong></i>
 				</span>
-                <h2>Мы проводим полный цикл</br> ремонтных работ</h2>
+                <h2>Мы проводим полный цикл</br> покрасочных и ремонтных работ</h2>
             </div>
             <div class="col-md-3 col-sm-6">
 				<span class="fa-stack fa-3x">
@@ -244,7 +244,7 @@ $this->setFrameMode(true); ?>
         <p>&nbsp;</p>
 
         <h3 class="text-center"><strong>Мы предлагаем полный спектр услуг по ремонту автомобиля и его техобслуживанию!</strong></h3>
-        <h3 class="text-center">Наши мастера выполнят <a href="#callback"><?= $arResult['NAME'] ?></a> любой сложности!</h3>
+        <h3 class="text-center">Наши мастера выполнят <a href="#callbackhunter"><?= $arResult['NAME'] ?></a> любой сложности!</h3>
 
         <div class="row mtb text-center">
             <div class="1col-md-10 1col-md-offset-1">
@@ -257,7 +257,7 @@ $this->setFrameMode(true); ?>
                             <li><?= $work_type ?></li>
                         <? endforeach ?>
                     </ul>
-                    <a href="#callback" class="btn btn-lg btn-red click-event" role="button"
+                    <a href="#callbackhunter" class="btn btn-lg btn-red click-event" role="button"
                        id="cta2|to-mm1">Заказать за <?= $arResult['PROPERTIES']['FIRST_OFFER']['arEl']['PROPERTY_PRICE_VALUE'] ?> руб</a>
                 </div>
 
