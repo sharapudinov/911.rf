@@ -36,7 +36,7 @@ $this->setFrameMode(true); ?>
                     <div class="col-sm-8 col-sm-offset-2">
                         <a class="btn btn-danger btn-xlg btn-block click-event"
 
-                           href="#callbackhunter"
+                           href="#callback"
 
                            id="cta0|calculate-price"
 
@@ -127,7 +127,7 @@ $this->setFrameMode(true); ?>
             <div class="col-md-6 col-md-offset-3">
                 <a class="btn btn-danger btn-xlg btn-block click-event"
 
-                   href="#callbackhunter"
+                   href="#callback"
 
                    id="cta1|podat-zayavku"
 
@@ -244,7 +244,7 @@ $this->setFrameMode(true); ?>
         <p>&nbsp;</p>
 
         <h3 class="text-center"><strong>Мы предлагаем полный спектр услуг по ремонту автомобиля и его техобслуживанию!</strong></h3>
-        <h3 class="text-center">Наши мастера выполнят <a href="#callbackhunter"><?= $arResult['NAME'] ?></a> любой сложности!</h3>
+        <h3 class="text-center">Наши мастера выполнят <a href="#callback"><?= $arResult['NAME'] ?></a> любой сложности!</h3>
 
         <div class="row mtb text-center">
             <div class="1col-md-10 1col-md-offset-1">
@@ -257,7 +257,7 @@ $this->setFrameMode(true); ?>
                             <li><?= $work_type ?></li>
                         <? endforeach ?>
                     </ul>
-                    <a href="#callbackhunter" class="btn btn-lg btn-red click-event" role="button"
+                    <a href="#callback" class="btn btn-lg btn-red click-event" role="button"
                        id="cta2|to-mm1">Заказать за <?= $arResult['PROPERTIES']['FIRST_OFFER']['arEl']['PROPERTY_PRICE_VALUE'] ?> руб</a>
                 </div>
 
@@ -271,7 +271,7 @@ $this->setFrameMode(true); ?>
                             <li><?= $work_type ?></li>
                         <? endforeach ?>
                     </ul>
-                    <a href="#callbackhunter" class="btn btn-lg btn-red click-event" role="button"
+                    <a href="#callback" class="btn btn-lg btn-red click-event" role="button"
                        id="cta2|to-mm2">Заказать за <?= $arResult['PROPERTIES']['SECOND_OFFER']['arEl']['PROPERTY_PRICE_VALUE'] ?> руб</a>
                 </div>
 
@@ -284,7 +284,7 @@ $this->setFrameMode(true); ?>
                             <li><?= $work_type ?></li>
                         <? endforeach ?>
                     </ul>
-                    <a href="#callbackhunter" class="btn btn-lg btn-red click-event" role="button"
+                    <a href="#callback" class="btn btn-lg btn-red click-event" role="button"
                        id="cta2|to-mm3">Заказать за <?= $arResult['PROPERTIES']['THIRD_OFFER']['arEl']['PROPERTY_PRICE_VALUE'] ?> руб</a>
                 </div>
             </div><!--/col-md-10 -->
@@ -357,7 +357,7 @@ $this->setFrameMode(true); ?>
         <div class="col-md-8 col-md-offset-2">
             <a class="btn btn-danger btn-xlg btn-block click-event"
                id="cta3|do_action"
-               href="#callbackhunter"
+               href="#callback"
                role="button"><span class="hidden-xs"> Заказать <?=strtolower($arResult['NAME'])?></span><span
                     class="visible-xs">Провести ТО</span></a>
         </div>

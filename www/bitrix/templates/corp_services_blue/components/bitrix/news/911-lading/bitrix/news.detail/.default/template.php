@@ -37,7 +37,7 @@ $this->setFrameMode(true);?>
                     <div class="col-sm-8 col-sm-offset-2">
                         <a class="btn btn-danger btn-xlg btn-block click-event"
 
-                           href="#callbackhunter"
+                           href="#callback"
 
                            id="cta0|calculate-price"
 
@@ -129,7 +129,7 @@ $this->setFrameMode(true);?>
             <div class="col-md-6 col-md-offset-3">
                 <a class="btn btn-danger btn-xlg btn-block click-event"
 
-                   href="#callbackhunter"
+                   href="#callback"
 
                    id="cta1|podat-zayavku"
 
@@ -252,7 +252,7 @@ $this->setFrameMode(true);?>
 
         <h3 class="text-center"><strong>Выберите готовый пакет техобслуживания от МОЙМЕХАНИК &ndash; экономия
                 более 500 рублей</strong></h3>
-        <h3 class="text-center">или техобслуживание <a href="#callbackhunter">рекомендованное производителем
+        <h3 class="text-center">или техобслуживание <a href="#callback">рекомендованное производителем
                 по пробегу</a></h3>
 
         <div class="row mtb text-center">
@@ -267,7 +267,7 @@ $this->setFrameMode(true);?>
                         <li>Замена салонного фильтра</li>
                         <li>Проверка всех жидкостей и шлангов</li>
                     </ul>
-                    <a href="#callbackhunter" class="btn btn-lg btn-red click-event" role="button"
+                    <a href="#callback" class="btn btn-lg btn-red click-event" role="button"
                        id="cta2|to-mm1">Провести ТО | 2000 руб</a>
                 </div>
 
@@ -430,7 +430,7 @@ $this->setFrameMode(true);?>
         <div class="col-md-8 col-md-offset-2">
             <a class="btn btn-danger btn-xlg btn-block click-event"
                id="cta3|do_action"
-               href="#callbackhunter"
+               href="#callback"
                role="button"><span class="hidden-xs">Провести ТО </span><span
                     class="visible-xs">Провести ТО</span></a>
         </div>

@@ -94,8 +94,8 @@ IncludeTemplateLangFile(__FILE__);
 
                             <div class="btn-place">
 
-                                <a href="#callbackhunter" id="zvonok-button"></a>
-                                <a href="#callbackhunter" id="konsultac-button"></a>
+                                <a href="#callback" id="zvonok-button"></a>
+                                <a href="#callback" id="konsultac-button"></a>
 
                                 <div id="zakaz-form">
                                     <?$APPLICATION->IncludeComponent(

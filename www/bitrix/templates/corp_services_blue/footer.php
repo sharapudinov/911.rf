@@ -37,8 +37,18 @@
 </div>
 </div>
 </div>
-<script type="text/javascript" src="//cdn.callbackhunter.com/cbh.js?hunter_code=3c3f75aafedf49c4c92e7f8b3d5cb5ed" charset="UTF-8"></script>
+<!-- Begin LeadBack code {literal} -->
+<script>
+	var _emv = _emv || [];
+	_emv['campaign'] = '761e6675f9e5460765933456';
 
+	(function() {
+		var em = document.createElement('script'); em.type = 'text/javascript'; em.async = true;
+		em.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'leadback.ru/js/leadback.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(em, s);
+	})();
+</script>
+<!-- End LeadBack code {/literal} -->
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
 	(function (d, w, c) {

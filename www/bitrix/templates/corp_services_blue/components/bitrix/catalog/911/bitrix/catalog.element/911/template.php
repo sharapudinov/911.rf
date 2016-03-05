@@ -128,7 +128,7 @@ $this->setFrameMode(true); ?>
             <div class="col-md-6 col-md-offset-3">
                 <a class="btn btn-danger btn-xlg btn-block click-event"
 
-                   href="#callbackhunter"
+                   href="#callback"
 
                    id="cta1|podat-zayavku"
 
@@ -225,7 +225,7 @@ $this->setFrameMode(true); ?>
             <div class="col-md-6 col-md-offset-3">
                 <a class="btn btn-danger btn-xlg btn-block click-event"
 
-                   href="#callbackhunter"
+                   href="#callback"
 
                    id="cta1|podat-zayavku"
 
@@ -302,7 +302,7 @@ $this->setFrameMode(true); ?>
         <div class="col-md-8 col-md-offset-2">
             <a class="btn btn-danger btn-xlg btn-block click-event"
                id="cta3|do_action"
-               href="#callbackhunter"
+               href="#callback"
                role="button"><span class="hidden-xs"> Заказать </span><span
                     class="visible-xs">Заказать</span></a>
         </div>
