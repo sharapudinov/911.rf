@@ -61,7 +61,7 @@ $this->setFrameMode(true); ?>
                 <h2>Прозрачная цена</h2>
                 <p class="clearfix"></p>
                 <p>
-                    Цена на покраску и ремонтные работы останется неизменной - без дополнительных затрат и наценок на
+                    Цена на ремонтные работы останется неизменной - без дополнительных затрат и наценок на
                     детали.
                 </p>
             </div>
@@ -70,8 +70,7 @@ $this->setFrameMode(true); ?>
                 <h2>Гарантия 12 месяцев</h2>
                 <p class="clearfix"></p>
                 <p>
-                    Мы предоставляем гарантию 12 месяцев на все покрасочные и ремонтные работы.
-
+                    Мы предоставляем гарантию 12 месяцев или 12 000 км на все ремонтные работы.
                 </p>
             </div>
         </div>
@@ -102,7 +101,7 @@ $this->setFrameMode(true); ?>
 				<i class="fa fa-circle-thin fa-stack-2x fa-inverse"></i>
 				<i class="fa fa-stack-1x fa-inverse"><strong>3</strong></i>
 				</span>
-                <h2>Мы проводим полный цикл</br> покрасочных и ремонтных работ</h2>
+                <h2>Мы проводим полный цикл</br> ремонтных работ</h2>
             </div>
             <div class="col-md-3 col-sm-6">
 				<span class="fa-stack fa-3x">
@@ -129,7 +128,7 @@ $this->setFrameMode(true); ?>
             <div class="col-md-6 col-md-offset-3">
                 <a class="btn btn-danger btn-xlg btn-block click-event"
 
-                   href="#callbackhunter"
+                   href="#callback"
 
                    id="cta1|podat-zayavku"
 
@@ -214,7 +213,7 @@ $this->setFrameMode(true); ?>
             <? foreach ($arResult['PROPERTIES']['WORK_TYPES']['arEl'] as $work_type): ?>
             <tr>
                 <td><?= $work_type['NAME'] ?> </td>
-                <td class="text-center"><?= $work_type['PROPERTY_PRICE_VALUE'] * 1.1 ?></td>
+                <td class="text-center"><?= $work_type['PROPERTY_PRICE_VALUE'] * 1.3 ?></td>
                 <td class="success text-center lead"><?= $work_type['PROPERTY_PRICE_VALUE'] ?></td>
             </tr>
             </tbody>
@@ -226,7 +225,7 @@ $this->setFrameMode(true); ?>
             <div class="col-md-6 col-md-offset-3">
                 <a class="btn btn-danger btn-xlg btn-block click-event"
 
-                   href="#callbackhunter"
+                   href="#callback"
 
                    id="cta1|podat-zayavku"
 
@@ -255,7 +254,7 @@ $this->setFrameMode(true); ?>
 <div class="container-fluid bg-primary" id="feedback">
     <div class="container_no">
         <div id="carousel-feedback" class="carousel slide" data-ride="carousel">
-            <h1 class="text-center">Видео</h1>
+            <h1 class="text-center">Отзывы довольных клиентов</h1>
             <!-- Indicators -->
             <ol class="carousel-indicators">
                 <li data-target="#carousel-feedback" data-slide-to="0" class="active"></li>
@@ -303,7 +302,7 @@ $this->setFrameMode(true); ?>
         <div class="col-md-8 col-md-offset-2">
             <a class="btn btn-danger btn-xlg btn-block click-event"
                id="cta3|do_action"
-               href="#callbackhunter"
+               href="#callback"
                role="button"><span class="hidden-xs"> Заказать </span><span
                     class="visible-xs">Заказать</span></a>
         </div>
