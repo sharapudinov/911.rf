@@ -13,6 +13,7 @@
 
 $this->setFrameMode(true);
 $this->addExternalCss("/bitrix/css/main/bootstrap.css");
+
 ?><?$APPLICATION->IncludeComponent(
 	"bitrix:catalog.section.list",
 	"",
