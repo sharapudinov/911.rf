@@ -567,4 +567,12 @@ $rsOf = CIBlockElement::GetList(
 while ($arEl = $rsOf->GetNext()) {
     $arResult['PROPERTIES']['VIDEO']['arEl'][] = $arEl;
 }
+
+$dbMarka=CIBlockSection::GetList(
+    array(),
+    array("CODE"=>$arParams['SECTION_CODE']),
+    false,
+    array("DESCRIPTION",'PICTURE',"DETAIL_PICTURE","NAME")
+);
+$arResult['MARKA']=$dbMarka->GetNext();
 ?>

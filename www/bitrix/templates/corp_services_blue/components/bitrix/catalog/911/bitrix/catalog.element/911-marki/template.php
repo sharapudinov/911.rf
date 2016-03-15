@@ -12,7 +12,7 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true); ?>
 <?
-//test_dump($arResult);
+test_dump($arResult['MARKA']);
 ?>
 <style>
     #header {

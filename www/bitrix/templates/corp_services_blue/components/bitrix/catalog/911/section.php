@@ -123,7 +123,7 @@ if ($isFilter)
 		"ELEMENT_ID" => $arResult["VARIABLES"]["ELEMENT_ID"],
 		"ELEMENT_CODE" => $arResult["VARIABLES"]["SECTION_CODE"],
 		"SECTION_ID" => $arResult["VARIABLES"]["SECTION_ID"],
-		"SECTION_CODE" => $arResult["VARIABLES"]["SECTION_CODE"],
+		"SECTION_CODE" => $arResult["VARIABLES"]["ELEMENT_CODE"],
 		"SECTION_URL" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["section"],
 		"DETAIL_URL" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["element"],
 		'CONVERT_CURRENCY' => $arParams['CONVERT_CURRENCY'],
