@@ -26,10 +26,14 @@ test_dump($arResult['MARKA']);
     <div class="container">
         <div class="row">
             <div class="col-md-12 title-block">
-                <h1><?= $arResult['NAME'] ?></br> для всех видов автомобилей</h1>
+                <h1><?= $arResult['NAME'] ?> на <?= $arResult['MARKA']['NAME'] ?></h1>
                 <p class="clearfix"></p>
-                <h2><?= $arResult['PREVIEW_TEXT'] ?></h2>
-
+                <div class="col-sm-6 text-center img-marka-logo">
+                    <img src="<?=$arResult['MARKA']["PICTURE"]?>" alt="">
+                </div>
+                <div class="col-sm-6 text-center">
+                    <h2><?= $arResult['PREVIEW_TEXT'] ?></h2>
+                </div>
                 <!-- кнопка -->
                 <p class="clearfix">&nbsp;</p>
                 <div class="row">
@@ -46,7 +50,7 @@ test_dump($arResult['MARKA']);
                 <!/-- кнопка -->
                 <p class="clearfix"></p>
                 <div class="text-muted text-center">
-                    <small>Оставьте заявку и получите купон на 1 000 руб. на все виды услуг</small>
+                    <small>Оставьте заявку и получите 10% скидку на ремонт от 20 000 рублей</small>
                 </div>
             </div>
         </div>
@@ -188,7 +192,7 @@ test_dump($arResult['MARKA']);
                 </div>
             </div>
             <div class="col-md-5 text-center">
-                <div class="thumbnail">
+                <div class="thumbnail img-detal-service">
                     <img src="<?= $arResult['DETAIL_PICTURE']['SRC'] ?>" class="img-responsive"/>
                 </div>
             </div>

@@ -266,3 +266,15 @@ h1.footer-phone {
 	padding-top: 40px;
 	padding-bottom: 60px
 }
+
+.img-detal-service{
+	border: none;
+}
+
+	.img-detal-service img{
+		max-height: 600px;
+	}
+
+.img-marka-logo img{
+	width: 250px;
+}
