@@ -61,12 +61,18 @@ body.operator-unavailable .operator-available {
 		margin-left: 3em;
 		text-align: center
 	}
+
 }
 
 
 #header .title-block {
 	background-color: rgba(256, 256, 256, 0.85);
-	padding: 10px 30px 20px
+	padding: 10px 15px 20px;
+}
+
+#header .first-title-block{
+	background-color: rgba(256, 256, 256, 0.85);
+	padding: 10px 15px 20px;
 }
 
 #price h1,
@@ -75,18 +81,21 @@ body.operator-unavailable .operator-available {
 #feedback h1 {
 	text-transform: uppercase;
 	font-weight: 600;
-	letter-spacing: -1px
+	letter-spacing: 5px;
 }
 
 #header h1 {
 	font-weight: 900;
+	color: #d9534f;
 	letter-spacing: 3px;
 	text-align: center;
 	text-transform: uppercase;
+	margin: 2% 0 2% 0;
 }
 
 #header h2 {
-	letter-spacing: -1px
+	letter-spacing: -1px;
+	margin: 25px;
 }
 
 @media screen and (min-width: 768px) {
@@ -95,12 +104,13 @@ body.operator-unavailable .operator-available {
 	}
 
 	#header {
-		padding-top: 108px
+		padding-top: 25px
 	}
 
 	.table {
 		font-size: 1.3em
 	}
+
 }
 
 .jumbotron {
@@ -137,6 +147,25 @@ body.operator-unavailable .operator-available {
 #how h1, #how h2 {
 	margin-bottom: 1.5em
 }
+
+#adress {
+	color: #000;
+	margin-bottom: 0px;
+}
+
+#adress h1, #adress h2 {
+	text-transform: uppercase;
+	font-size: 45px;
+	font-weight: 600;
+	letter-spacing: 5px;
+	margin: 25px 0 25px 0;
+}
+
+#adress p{
+	font-size: 30px;
+	margin-bottom: 15px;
+}
+
 .advantages {
 	padding-top: 40px;
 	padding-bottom: 60px
@@ -170,7 +199,42 @@ body.operator-unavailable .operator-available {
 	.advantages .box-content .icon {
 		font-size: 2.3em
 	}
+
 }
+
+@media screen and (max-width: 568px) {
+	.img-marka-logo img{
+		margin-top: 10% !important;
+	}
+
+	.img-marka-auto img{
+		height: 260px !important;
+	}
+}
+
+@media screen and (max-width: 420px) {
+
+	#header h1{
+		font-size: 26px;
+	}
+
+	#header h2{
+		font-size: 20px;
+	}
+
+	.image-block {
+		min-height: 260px;
+	}
+
+	.img-marka-auto img{
+		height: 160px !important;
+	}
+
+	.img-marka-logo img{
+		height: 90px;
+	}
+}
+
 #price {
 	padding-top: 35px;
 	padding-bottom: 35px
@@ -275,6 +339,36 @@ h1.footer-phone {
 		max-height: 600px;
 	}
 
+.image-block{
+	min-height: 350px;
+}
+
+.img-marka-logo{
+	/*min-height: 350px;*/
+}
+
 .img-marka-logo img{
-	width: 250px;
+	margin-top: 30%;
+	vertical-align: middle;
+	text-align: center;
+	max-width: 250px;
+	max-height: 150px;
+}
+
+.img-marka-auto img{
+	height: 350px;
+	max-width: 680px;
+	max-height: 350px;
+
+}
+
+.btn-price{
+	margin-top: 10px;
+}
+
+.normal-text{
+	font-size: 1.3em !important;
+	padding: 8px;
+	line-height: 1.42857143;
+	vertical-align: top;
 }

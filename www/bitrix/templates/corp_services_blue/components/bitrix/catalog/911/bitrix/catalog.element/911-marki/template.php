@@ -12,7 +12,7 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true); ?>
 <?
-test_dump($arResult['MARKA']);
+/*test_dump($arResult);*/
 ?>
 <style>
     #header {
@@ -26,18 +26,31 @@ test_dump($arResult['MARKA']);
     <div class="container">
         <div class="row">
             <div class="col-md-12 title-block">
-                <h1><?= $arResult['NAME'] ?> на <?= $arResult['MARKA']['NAME'] ?></h1>
-                <p class="clearfix"></p>
-                <div class="col-sm-6 text-center img-marka-logo">
-                    <img src="<?=$arResult['MARKA']["PICTURE"]?>" alt="">
+                <div class="row">
+                    <div class="col-md-12 title-block">
+                        <h1><?= $arResult['NAME'] ?> на <?= $arResult['MARKA']['NAME'] ?></h1>
+                    </div>
                 </div>
-                <div class="col-sm-6 text-center">
-                    <h2><?= $arResult['PREVIEW_TEXT'] ?></h2>
+                <div class="image-block">
+                    <div class="col-sm-8 text-center img-marka-auto">
+                        <img src="<?=$arResult['MARKA']["DETAIL_PICTURE"]?>" alt="">
+                    </div>
+                    <div class="col-sm-4 text-center img-marka-logo">
+                        <img src="<?=$arResult['MARKA']["PICTURE"]?>" alt="">
+                    </div>
+
                 </div>
                 <!-- кнопка -->
                 <p class="clearfix">&nbsp;</p>
                 <div class="row">
-                    <div class="col-sm-8 col-sm-offset-2">
+                    <div class="col-md-12 title-block">
+                        <h2>Лучший специализированный автосервис <?=$arResult['MARKA']['NAME']?> на Северо-Западе Москвы.
+                            Высококвалифицированные автомеханики выполнят <?=$arResult['DETAIL_TEXT']?> на современном
+                            высокоточном оборудовании в день обращения.</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 btn-price">
                         <a class="btn btn-danger btn-xlg btn-block click-event"
 
                            href="#price"
@@ -65,8 +78,7 @@ test_dump($arResult['MARKA']);
                 <h2>Прозрачная цена</h2>
                 <p class="clearfix"></p>
                 <p>
-                    Цена на ремонтные работы останется неизменной - без дополнительных затрат и наценок на
-                    детали.
+                    Цена на ремонтные работы останется неизменной - без дополнительных затрат и наценок на детали.
                 </p>
             </div>
             <div class="col-sm-6 text-center">
@@ -117,6 +129,7 @@ test_dump($arResult['MARKA']);
         </div>
     </div>
 </div>
+
 <div class="container-fluid jumbotron" id="no-weekend">
     <div class="container">
         <div class="row">
@@ -136,14 +149,14 @@ test_dump($arResult['MARKA']);
 
                    id="cta1|podat-zayavku"
 
-                   role="button"><span class="hidden-xs"> Заказать</span></span>
-                </a>
+                   role="button">Заказать</a>
             </div>
         </div>
         <!/-- кнопка -->
 
     </div>
 </div>
+
 <div class="container-fluid advantages" id="advantages_sec">
     <div class="container">
         <div class="row">
@@ -153,7 +166,7 @@ test_dump($arResult['MARKA']);
                     <h2>Только опытные сотрудники</h2>
                     <p>
                         Специалисты нашего сервиса – профессионалы с опытом работы более 10 лет в сфере покраски и
-                        ремонта авто.
+                        ремонта автомобилей <?= $arResult['MARKA']['NAME'] ?>.
                     </p>
                 </div>
                 <div class="box-content">
@@ -176,18 +189,17 @@ test_dump($arResult['MARKA']);
                     <i class="icon fa fa-thumbs-o-up fa-5x text-success"></i>
                     <h2>Гарантия год или 12000 км</h2>
                     <p>
-                        Мы&nbsp;отбираем запчасти, покупаем дорогие расходники и&nbsp;фанатично следим за&nbsp;квалификацией
-                        механиков. Но&nbsp;если что-то не&nbsp;так&nbsp;&mdash; переделаем и&nbsp;заменим без
+                        Мы&nbsp;отбираем запчасти и покупаем дорогие расходники только по рекомендации от производителя <?= $arResult['MARKA']['NAME'] ?>,
+                        также мы постоянно улучшаем квалификацию своих автомехаников. Но если что-то не так &mdash; переделаем и заменим без
                         вопросов.
                     </p>
                 </div>
                 <div class="box-content">
                     <i class="icon fa fa-car fa-4x text-success"></i>
-                    <h2>Любые марки</h2>
+                    <h2><?= $arResult['MARKA']['NAME'] ?> - наша специализация</h2>
                     <p>
-                        Обслуживаем 43 марки автомобилей, включая все&nbsp;самые популярные в&nbsp;России: Audi,
-                        BMW, Chevrolet, Ford, Honda, Hyundia, Kia, Land Rover, Lexus, Mazda, Mercedes,
-                        Mitsubishi, Nissan, Opel, Peugeot, Renault, Skoda, Toyota, Volkswagen, Volvo и&nbsp;другие.
+                        Наш автосервис специализируется на <?= $arResult['MARKA']['NAME'] ?>, мы обслуживанием автомобили марки <?= $arResult['MARKA']['NAME'] ?>
+                        всех моделей и любого года выпуска. Мы имеем своих собственных поставщиков оригинальных запчастей на автомобили всех моделей <?= $arResult['MARKA']['NAME'] ?>.
                     </p>
                 </div>
             </div>
@@ -203,7 +215,7 @@ test_dump($arResult['MARKA']);
 
 <div class="container-fluid jumbotron" id="price">
     <div class="container">
-        <h1 class="text-center">Сколько стоит</h1>
+        <h1 class="text-center">Сколько стоит <?= $arResult['NAME'] ?> на <?= $arResult['MARKA']['NAME'] ?></h1>
         <!-- пример цен -->
         <table class="table table-hover">
             <thead>
@@ -223,8 +235,10 @@ test_dump($arResult['MARKA']);
             </tbody>
             <? endforeach ?>
         </table>
-        <!-- кнопка -->
-        <p class="clearfix">&nbsp;</p>
+
+        <!-- кнопка
+        <p class="clearfix">&nbsp;</p>-->
+
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
                 <a class="btn btn-danger btn-xlg btn-block click-event"
@@ -233,11 +247,14 @@ test_dump($arResult['MARKA']);
 
                    id="cta1|podat-zayavku"
 
-                   role="button"><span class="hidden-xs"> Заказать</span></span>
-                </a>
+                   role="button">Заказать</a>
             </div>
         </div>
         <!/-- кнопка -->
+
+        <p class="normal-text text-center">Автосервис «Автотехцентр-911» <strong>выполнит БЕСПЛАТНО диагностику вашего автомобиля</strong>. Автомеханик сможет точно назвать сроки и стоимость ремонта,
+            и при вашем одобрении сможет сразу начать <?=$arResult['NAME']?> на <?= $arResult['MARKA']['NAME'] ?>.</p>
+
     </div>
 </div><!-- ikonostas -->
 
@@ -300,58 +317,38 @@ test_dump($arResult['MARKA']);
         </div>
     </div>
 </div>
-<div class="container page-block">
-    <p class="clearfix">&nbsp;</p>
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <a class="btn btn-danger btn-xlg btn-block click-event"
-               id="cta3|do_action"
-               href="#callback"
-               role="button"><span class="hidden-xs"> Заказать </span><span
-                    class="visible-xs">Заказать</span></a>
+
+<div class="container-fluid jumbotron" id="no-weekend">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <h1 class="text-center">Бесплатная диагностика</h1>
+                <h2 class="text-center">Продиагностируйте свой автомобиль и решите - необходим ли вам ремонт!</h2>
+            </div>
         </div>
+
+        <!-- кнопка -->
+        <p class="clearfix">&nbsp;</p>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <a class="btn btn-danger btn-xlg btn-block click-event"
+
+                   href="#callback"
+
+                   id="cta1|podat-zayavku"
+
+                   role="button">Заказать</a>
+            </div>
+        </div>
+        <!/-- кнопка -->
+
     </div>
 </div>
 
-
-<div id="optin-exit-modal" class="modal fade lg in" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-body bg-primary">
-                <button type="button" class="close btn-lg" data-dismiss="modal" aria-hidden="true">×</button>
-                <div class="row">
-                    <div class="col-xs-11 col-xs-offset-1">
-                        <h1 style="font-size: 350%;color: yellow;" id="simple-quote-request-modal-labbledby"
-                            class="modal-title">319 рублей прямо сейчас!</h1>
-                        <h2>Всем новым пользователям мы&nbsp;дарим <strong>319 рублей</strong> на&nbsp;личный
-                            счет, которые можно потратить в&nbsp;будущем при заказе наших услуг</h2>
-                        <p class="lead hidden-xs" style="color: #eee;">Введите ваш email, автоматически будет
-                            создан личный кабинет, пароль для доступа к&nbsp;личному кабинету будет выслан по&nbsp;электронной
-                            почте.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-body" style="background-color: #2e3c44;">
-                <img
-                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAABmCAYAAABSm2hyAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpENDE3MTM1M0UzNUMxMUUzQkZCQkExNjc0MTk2RjAxMCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpENDE3MTM1NEUzNUMxMUUzQkZCQkExNjc0MTk2RjAxMCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkQ0MTcxMzUxRTM1QzExRTNCRkJCQTE2NzQxOTZGMDEwIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkQ0MTcxMzUyRTM1QzExRTNCRkJCQTE2NzQxOTZGMDEwIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+ynB5mQAACDlJREFUeNrUXHtM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"
-                    alt="Arrow" style="position: absolute; left: 4%; top: -90px;">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <form role="form" method="post" action="/user/sign-up/">
-                            <input type="hidden" name="source" value="email_collector_form_319">
-                            <input type="hidden" id="_post_token" name="TOKEN990429151X1455380179"
-                                   value="NIhonnGedEMYH9IUnbPuYHtQ9zH.OaSn">
-                            <div class="input-group input-group-lg">
-                                <input type="text" class="form-control" name="email" placeholder="Email"
-                                       title="Email" value="">
-                                        <span class="input-group-btn"><button class="btn btn-danger" type="submit">
-                                                ПОЛУЧИТЬ<span class="hidden-xs"> 319 РУБЛЕЙ</span>!
-                                            </button></span>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+<div class="container" id="adress">
+    <div class="container">
+        <h1 class="text-center">Автотецентр-911</h1>
+        <p class="text-center">г. Москва, ул. Тагильская, 4, стр. 15</p>
+        <p class="text-center">Районы обслуживания: САО, СВАО, ВАО</p>
     </div>
 </div>
