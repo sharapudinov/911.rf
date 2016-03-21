@@ -253,7 +253,7 @@ $this->setFrameMode(true); ?>
         <!/-- кнопка -->
 
         <p class="normal-text text-center">Автосервис «Автотехцентр-911» <strong>выполнит БЕСПЛАТНО диагностику вашего автомобиля</strong>. Автомеханик сможет точно назвать сроки и стоимость ремонта,
-            и при вашем одобрении сможет сразу начать <?=$arResult['NAME']?> на <?= $arResult['MARKA']['NAME'] ?>.</p>
+            и при вашем одобрении сможет сразу начать <?=$arResult['DETAIL_TEXT']?> на <?= $arResult['MARKA']['NAME'] ?>.</p>
 
     </div>
 </div><!-- ikonostas -->
